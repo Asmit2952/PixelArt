@@ -1,7 +1,7 @@
 from PIL import Image
 import matplotlib.pyplot as plt
 
-img=Image.open('mario.jpeg')
+img=Image.open('spidey.jpg')
 
 def photo2pixelart(image, i_size, o_size):
     img=Image.open(image)
@@ -10,7 +10,7 @@ def photo2pixelart(image, i_size, o_size):
 
     res=small_img.resize(img.size, Image.NEAREST)
 
-    filename=f'mario_{i_size[0]}x{i_size[1]}.png'
+    filename=f'spidey_{i_size[0]}x{i_size[1]}.png'
     res.save(filename)
 
     plt.figure(figsize=(16,10))
@@ -26,4 +26,4 @@ def photo2pixelart(image, i_size, o_size):
     plt.savefig('temp.png')
     plt.show()
     
-photo2pixelart(image='mario.jpeg',i_size=(80,80),o_size=img.size)
+photo2pixelart(image='spidey.jpg',i_size=(80,80),o_size=img.size)
